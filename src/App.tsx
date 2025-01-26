@@ -129,13 +129,20 @@ function App() {
           </form>
         </section>
 
-        <section className="flex flex-col space-y-4 py-8 container max-h-[70vh] pb-24 overflow-y-auto">
+        <section className="flex flex-col space-y-4 py-8 container max-h-[60vh] pb-24 overflow-y-auto">
           {checkpoints.map((checkpoint, index) => (
             <Card key={index}>
               <CardHeader>
                 <CardTitle>
                   <span>{index + 1}.</span>{" "}
-                  <span className="text-main">{checkpoint.url}</span>
+                  <a
+                    href={checkpoint.url}
+                    target="_blank"
+                    className="text-main"
+                    rel="noreferrer"
+                  >
+                    {checkpoint.url}
+                  </a>
                 </CardTitle>
                 <CardDescription>
                   <p>Status: {checkpoint.status}</p>
