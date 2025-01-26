@@ -129,7 +129,7 @@ function App() {
           </form>
         </section>
 
-        <section className="flex flex-col space-y-4 py-8 container">
+        <section className="flex flex-col space-y-4 py-8 container max-h-[50vh] overflow-y-auto">
           {checkpoints.map((checkpoint, index) => (
             <Card key={index}>
               <CardHeader>
